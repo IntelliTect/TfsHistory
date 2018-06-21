@@ -1,7 +1,10 @@
 # TfsHistory
 PowerShell script to get the change history of a project using TFS version control as a CSV file. 
 
-This is a simple script that calls the TFS API to get the history of all files in the project. It pulls the changesets and then expands to all files touched. The results are exported to a file in a CSV format.
+## Purpose
+If your code requires any type of audit from external entities, you may be asked to provide a list of all the changes made to files during a window of time. While history in TFS can provide this, it does it by changeset not by file. To see it by file, only one file can be seen at a time. This tool allows you to get a list of all changes including filename and date changed. It works for Team Foundation Version Control (TFVC). 
+
+This is a simple script that calls the TFS API to get the history of all files in the project. It pulls the changesets and then expands to all files touched. The results are exported to a file (default name is FileHistory.csv) in a CSV format in the current folder.
 
 ### Output Format
 The CSV format has the following columns:
